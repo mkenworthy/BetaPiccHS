@@ -1,0 +1,142 @@
+\section{Photometric results $\&$ analysis}\label{sec:Photo_Results}
+\subsection{The 1981 event}\label{sec:method_1981}
+\begin{figure*}[b] %31.3cm
+    \centering
+        \includegraphics[trim={0 67.cm 0 0},clip,width=\textwidth] {Figures/Photometry/1981_fits.pdf} 
+         \caption{The amplitude $a$ of the BRITE (blue), bRing (green) and ASTEP (red) data fitted to the 1981 event are shown, where 0.035 marks the magnitude of the 1981 event. In light blue, the primary (MJD 58210 $\&$ 589413) and secondary (MJD 58707) Hll sphere transits of \pic c are marked. }
+     \label{fig:cross_correlation}
+\end{figure*}
+
+\begin{figure*} %60.7cm
+\ContinuedFloat
+    \centering
+        \includegraphics[trim={0 0 0 24.9cm},clip,width=\textwidth] {Figures/Photometry/1981_fits.pdf}
+    \caption{Continued}
+  \label{fig:cross_correlation2}
+\end{figure*}
+
+The lightcurve of the 1981 event (Fig. \ref{fig:1981}) is modelled as two rings, where an optically thick but narrow ring lies within a broader, optically thin one, as described in \citet{Lamers_1997}. 
+%
+The forward scattering from the optically thin ring passing in front of the star is characterised by a Gaussian feature with an FWHM of 3.2 days and a magnitude of 0.035 \citep{Lamers_1997}.
+%
+Furthermore, the segment of the ring transiting is approximated as a straight line, as the radius of the ring is much larger than the diameter of the star.
+%
+The 1981 event is fitted to the photometric data following \citet{Kenworthy_2021} and the model $F_{1981}(t)$ shown in Fig. \ref{fig:1981} is fitted for amplitude $a$ and offset $b$ using, 
+%
+\begin{equation}
+F(t) = aF_{1981}(t_{mid}) + b.
+\end{equation} 
+%
+
+% The fitting function takes $t_{mid}$ and masks out any datapoints more than 8 days away from the timestamp.  
+%
+% A fit is made every quarter-day, except when not enough data points are present; then the fit is forfeited. Furthermore, the non-linear fitting varies $t_{mid}$ by half a day to improve the fit and uses different $a$'s from 0 to 5.  
+%
+The function returns the best fit $a, b$ and $\sigma_a$, while discarding amplitudes larger than 0.05.
+%
+% The magnitude of the 1981 event is 0.035, therefore similar amplitudes could indicate a similar event. \\
+%
+$F(t)$ masks out any datapoints more than 8 days away from the timestamp, fitting only for the duration of the 1981 event.
+%
+All observational data from ASTEP, bRing and BRITE were fitted to the model, shown in Fig. \ref{fig:cross_correlation}.
+%
+bRing has the best coverage, while ASTEP's coverage is limited to the first 500 days, and BRITE's coverage is very sporadic.  
+%
+The transits of 1.5 months are marked in the blue box, while the uncertainties are marked by errorbars.
+%
+The magnitude of the 1981 event is indicated by a horizontal line ($a$=0.035). 
+%
+A good fit to the model would yield a smooth, symmetric increase and decline in amplitude to 0.035 during 8 days, simultaneously over multiple instruments.
+%
+The latter is unfortunately difficult to achieve due to a lack of coverage from ASTEP and BRITE. 
+%
+
+No such ideal fit is seen, however multiple timestamps exceed the 0.035 threshold.
+%primary transit
+The primary transit at MJD 58210 sees a symmetric curve at MJD 58250 beyond the detection threshold by ASTEP. 
+%
+Despite ASTEP showing a symmetric curve around the threshold of 0.035, BRING does not and BRITE does not have any coverage.
+%
+Therefore, the 1981 event likely did not occur during the first primary transit and could have been caused by systematic errors of ground-based instruments \citep{Kenworthy_2021}.
+%
+The second primary transit at MJD 59413 only has coverage from bRing, however there is a detection.
+%
+The errors among the amplitudes of the fit should be taken conservatively and therefore at MJD 58415 the detection threshold is just met.
+%
+Furthermore, the amplitudes around 0.01-0.02 have been seen (e.g. MJD 58815, MJD 59100, MJD 59760) and can not explicitly be caused by the 1981 event.
+%
+The rest of the detection ($a$>0.02) is short-lived for about a day or two, likely not the 1981 event.
+%
+The last transit is the secondary transit at MJD 58707, showing a detection (MJD 58690), even when taking the conservative amplitudes just outside the expected transit times.
+%
+A different model is needed to characterise the light curve.
+%
+There is no strong evidence that the 1981 event was caused by the Hill sphere transit of \pic c.  
+%Other detections
+
+Fig. \ref{fig:1981} shows additional features outside the transits. 
+%
+At MJD 57900, ASTEP observed an increase in flux, while BRTIE and bRING do not, possibly due to systematic errors or interruptions in telescope operation.
+%
+Furthermore ASTEP has larger errors at MJD 58270, therefore we do not consider this a robust detection.
+%
+At MJD 58070, MJD 58280, MJD 58750 and MJD 58930 bRing detects a signal. 
+%
+In all cases either the errors are large or it is not seen in the other instruments.
+%
+BRITE has the most accurate data as a space-based telescope and shorter observation times due to its orbital period around the Earth.
+%
+It sees no significant detections.
+%comparison pulsations
+
+
+There are pulsations with an amplitude of $a$ $\sim$ 0.01 over a span of 5-15 days, which occur semi-periodically and occasionally overlap with other instruments (MJD 57960), however not always (MJD 57980).
+%
+Several mechanisms could create brightness pulsations in the \pic system, however many are on the order of minutes to hours.
+%
+The star has two pulsation modes, one around 30 and the other 40 minutes, with a magnitude smaller than 1.5mmag \citep{Koen_2003}, neither of which can explain what we see.
+%
+Exocomets can also not cause such a feature. 
+%
+They are short-lived, typically lasting two days, are asymmetric and small \citep[$<$2 mmag;][]{Heller_2024, Zieba_2019}.  
+%
+It is notable that BRITE does not see such large magnitude events, suggesting ground-based systematics from atmospheric glow or the moon. 
+%
+
+
+
+% Comparison with Previous Work
+%
+We do not see a 1981 event analog in our data.
+%
+%
+% There was enough coverage to conclude that the event is unlikely to have happened during the \pic b transit.  
+%
+% The Hill sphere transit of \pic c leaves more uncertainty, however the primary transit at MJD 58210 has good coverage to conclude the transit is likely not linked to the 1981 event.
+%
+% Furthermore, all threshold detections outside the transits are not compelling.
+%
+Other transiting bodies could have created the 1981 event, however we are not aware of any other bodies large enough.  
+%
+Exocomets are too short-lived nor bright enough.  
+%
+Another hypothesis is forward scattering by a dust cloud.  
+%
+Dust clouds are large, resulting in brightness variations at long timescales.  
+%
+However, at the right tilt and inclination, the dust cloud transit can be short enough to coincide with the 1981 event.  
+ 
+
+%
+Furthermore, large comets can create dust clouds, which either pass the line of sight at the perihelion or are fragmented and collide with the star \citep{Lamers_1997}, creating so called Shoemaker-Levi fragments.  
+%
+This comet is captured into a satellite orbit and eventually broken apart by tidal disruption events. 
+% Consider alternative explanations for your findings.
+In conclusion, the origin of the 1981 event remains unknown and we do not see the 1981 event in our photometric analysis.
+%
+The hypotheses about a transiting planet or its Hill sphere have become more unlikely, as no compelling evidence was found with \pic b and \pic c \citep{Lecavelier_Des_Etangs_1997, Kenworthy_2021}.
+
+
+
+
+

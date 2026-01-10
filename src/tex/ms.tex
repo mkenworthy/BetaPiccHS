@@ -1,62 +1,126 @@
-% Define document class
-\documentclass[twocolumn]{aastex631}
+%                                                                 aa.dem
+% AA vers. 9.1, LaTeX class for Astronomy & Astrophysics
+% demonstration file
+%                                                       (c) EDP Sciences
+%-----------------------------------------------------------------------
+%
+%\documentclass[referee]{aa} % for a referee version
+%\documentclass[onecolumn]{aa} % for a paper on 1 column  
+%\documentclass[longauth]{aa} % for the long lists of affiliations 
+%\documentclass[letter]{aa} % for the letters 
+%\documentclass[bibyear]{aa} % if the references are not structured 
+%                              according to the author-year natbib style
 
-% Add here any additional package you need
-% \usepackage{foo}
+%
 
-% If you can, leave this package for last
-\usepackage{showyourwork}
 
-% Begin!
-\begin{document}
+\documentclass{aa}  
 
-% Title
-\title{An open source scientific article}
+\newcommand\picb{$\beta$ Pic b}
+\newcommand\picc{$\beta$ Pic c}
+\newcommand\pic{$\beta$ Pic }
+\usepackage[para,online,flushleft]{threeparttable}
+\usepackage{subcaption}
+\newlength{\twosubht}
+\newsavebox{\twosubbox}
+\usepackage{lscape}
+%
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{txfonts}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Author list
-\author{@mkenworthy}
+\usepackage{dblfloatfix}
 
-% Abstract with filler text
-\begin{abstract}
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-    Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-    Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-    Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-    Phasellus eu tellus sit amet tortor gravida placerat.
-    Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-    Praesent eget sem vel leo ultrices bibendum.
-    Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-    Curabitur auctor semper nulla donec varius orci eget risus.
-    Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-    Duis eget orci sit amet orci dignissim rutrum.
-\end{abstract}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{%
+        colorlinks,
+        breaklinks=true,
+        plainpages=false,%
+        citecolor=[rgb]{0,0.20,0.45},
+        linkcolor=[rgb]{0,0.20,0.45},
+        urlcolor=[rgb]{0,0.20,0.45},
+        bookmarksopen=true,%
+        bookmarksnumbered=false,%
+        bookmarksdepth=5%
+}
 
-% Main body with filler text
-\section{Introduction}
-\label{sec:intro}
+\usepackage[nolist,nohyperlinks]{acronym}
+\newacro{bring}[BRING]{Beta Pictoris b Rings}
+\newacro{sphere}[SPHERE]{Spectro-Polarimetric High-contrast Exoplanet REsearch}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-Phasellus eu tellus sit amet tortor gravida placerat.
-Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-Praesent eget sem vel leo ultrices bibendum.
-Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-Curabitur auctor semper nulla donec varius orci eget risus.
-Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-Duis eget orci sit amet orci dignissim rutrum.
 
-Nam dui ligula, fringilla a, euismod sodales, sollici- tudin vel, wisi.
-Morbi auctor lorem non justo, nam lacus libero, pretium at, lobortis vitae.
-Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna.
-Morbi ac orci et nisl hendrerit mollis, suspendisse ut massa, cras nec ante.
-Pellentesque a nulla cum sociis natoque penatibus et magnis dis parturient.
-Aliquam tincidunt urna, nulla ullamcorper vestibulum turpis.
-Pellentesque cursus luctus mauris \citep{Luger2021}.
+% the three lines suppress the hyperref 'link empty' warnings
+% explanation at: https://tex.stackexchange.com/questions/345764/journal-class-shows-package-hyperref-warning-suppressing-link-with-empty-targe
+\makeatletter
+\renewcommand*\aa@pageof{, page \thepage{} of \pageref*{LastPage}}
+\makeatother
 
-\bibliography{bib}
+% need to use TeX Live 2020 or older to avoid spurious "Package natbib Warning: Citation 'XXX' multiply defined" warnings
+% see https://tex.stackexchange.com/questions/625901/overleaf-citation-multiply-defined-with-aa-class-file
 
+%\usepackage[options]{hyperref}
+% To add links in your PDF file, use the package "hyperref"
+% with options according to your LaTeX or PDFLaTeX drivers.
+%
+\begin{document} 
+\authorrunning{Bakker et al.}
+\titlerunning{Beta Pic c Hill sphere transits}
+  \title{The Hill sphere transits of Beta Pic c \\ and a search for the 1981 event}
+
+   \author{V.E.C. Bakker
+          \inst{1}
+          \and
+        M. A. Kenworthy
+        \inst{2}
+        \and
+        Many Others
+        \inst{3}
+          }
+
+   \institute{Leiden Observatory, University of Leiden,
+   PO Box 9513, 2300 RA Leiden, The Netherlands\\
+   \email{vbakker@strw.leidenuniv.nl}
+   \and 
+      Scottish Universities Physics Alliance, Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh, EH9 3HJ, UK
+      \and
+      Centre for Exoplanet Science, University of Edinburgh, Edinburgh, EH9 3HJ, UK
+}
+   \date{Received \today; accepted XXXX}
+
+ 
+
+%\abstract{}{}{}{}{} 
+% 5 {} token are mandatory
+\input{Chapters/0_Abstract}
+ 
+
+\maketitle
+%
+%-------------------------------------------------------------------
+% \input{Chapters/0. Abstract}
+\input{Chapters/1_Introduction}
+\input{Chapters/2_Method}
+\input{Chapters/31_Analysis_1981}
+\input{Chapters/32_Analysis_CPD}
+\input{Chapters/4_Conclusion}
+
+
+\section{Source code}
+We are committed to open science and have made the data,
+reduction scripts, and plots in this paper available on an open-source basis\footnote{Available at \url{https://github.com/Valerie-B/Beta-pic-Hill-Sphere}}. All code is provided under a Berkeley Software Distribution (BSD) 2-Clause `Simplified' license.
+%
+\begin{acknowledgements}
+We thank all who contributed to the bRing project, acquiring data from BRITE, bRing and ASTEP. A special thanks to R. Stuik, K. Zwintz and  M.A. Kenworthy for providing the cleaned data. 
+%
+We than J.Wang for providing orbital constraints from radial velocity, imaging and GRAVITY observations.
+\end{acknowledgements}
+
+
+\bibliographystyle{aa}
+\bibliography{bib.bib}
+
+\input{Chapters/5. Appendix}
 \end{document}
+%
