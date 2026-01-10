@@ -1,0 +1,50 @@
+J/A+A/299/557       Light variations on Beta Pic  (Lecavelier des Etangs+, 1995)
+================================================================================
+Beta Pictoris: Evidence of light variations
+     LECAVELIER DES ETANGS A., DELEUILE M., VIDAL-MADJAR A., FERLET R.
+     NITSCHLEM C., NICOLET B., LAGRANGE-HENRI A.M.
+    <Astron. Astrophys. 299, 557 (1995)>
+    =1995A&A...299..557L        (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Stars, nearby; Photometry, Geneva
+Keywords: stars: Beta Pic - circumstellar matter - planetary systems
+
+Description:
+   We have analyzed {beta} Pictoris photometric measurements obtained from La
+   Silla by the Geneva Observatory from 1975 to 1992. These data show evidence
+   of variations in the brightness of the star, with no color dependency. Here,
+   we demonstrate that the light variations are present on long as well as on
+   short time scales. On a long time scale, we show that the apparent magnitude
+   of {beta} Pictoris decreased by 0.011+/-0.004mag from 1979 to 1982. Moreover,
+   when we consider all the measurements, the chance that there is no variation
+   at all can be estimated to be less than 10^-4^. On short time scales there
+   is a peculiar feature observed during about 30 days; the variations may be
+   as high as 0.04mag magnitude. A maximum entropy reconstruction of the
+   photometric data is tentatively proposed and some physical interpretations
+   are presented.
+
+File Summary:
+--------------------------------------------------------------------------------
+  FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe             80        .   This file
+table              71      238   Geneva photometry
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: table
+--------------------------------------------------------------------------------
+   Bytes Format  Units   Label    Explanations
+--------------------------------------------------------------------------------
+   2- 12  F11.3  d       JD       Julian date
+      17  I1     ---   q_Vmag     Quality factor of the V magnitude
+  20- 24  F5.3   mag     Vmag     V magnitude
+      29  I1     ---   q_colours  Quality factor of the colour indexes
+  32- 36  F5.3   mag     U-B      U-B colour index
+  39- 43  F5.3   mag     V-B      V-B colour index
+  46- 50  F5.3   mag     B1-B     B1-B colour index
+  53- 57  F5.3   mag     B2-B     B2-B colour index
+  60- 64  F5.3   mag     V1-B     V1-B colour index
+  67- 71  F5.3   mag     G-B      G-B colour index
+--------------------------------------------------------------------------------
+================================================================================
+(End)                             Simona Mei, Patricia Bauer [CDS]   21-Feb-1995
