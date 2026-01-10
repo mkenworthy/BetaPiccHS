@@ -4,6 +4,7 @@ dependencies:
   - conda-forge::python=3.11
   - conda-forge::pandas
   - conda-forge::astropy
+  - conda-forge::cython
   - conda-forge::scipy
   - conda-forge::tqdm
   - pip:
@@ -11,3 +12,4 @@ dependencies:
       - graphviz
       - emcee
       - corner
+      - orbitize==2.2.2
