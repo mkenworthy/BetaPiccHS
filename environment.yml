@@ -12,4 +12,4 @@ dependencies:
       - graphviz
       - emcee
       - corner
-      - orbitize==2.2.2
+      - orbitize==3.2.1
