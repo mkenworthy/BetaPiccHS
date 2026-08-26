@@ -292,30 +292,30 @@ The observed astrometric offsets in right ascension ($\Delta$RA) and declination
 
 \subsection{Orbit fit}
 
-% We combined the new relative astrometry observations presented above with the literature astrometry \citep{Lacour_2021, Nowak_2020}, imaging \citep{Lagrange_2020, Nielsen_2020}, radial velocity observations \citep{Lagrange_2020}, and absolute stellar astrometry \citep{Brandt_2021} to provide updated orbital parameters for both $\beta$~Pictoris~b and c using the \texttt{orbitize!} code \citep{orbitize}.
-% %
-% We fit a two-planet model to the data, fitting the system parallax, $\pi$, the stellar mass, $M_\star$, the planet masses, $M_b$ and $M_c$, and the orbital parameters of each planet: semi-major axis, $a$, orbital eccentricity, $e$, orbital inclination, $i$, argument of periastron, $\omega$, position of the ascending node, $\Omega$, and epoch of periastron in fractional orbital periods with respect to a reference epoch.
-% %
-% We used MJD 59000 as the reference epoch to allow for direct comparison against \citet{Lacour_2020}.
-% %
-% We imposed Gaussian priors on $M_\star$ informed by the literature measurements of $M_\star$ (see Table~\ref{tab:orbitize_param}), as well as the system parallax, using the same values as \citet{Lacour_2021}. 
+We combined the new relative astrometry observations presented above with the literature astrometry \citep{Lacour_2021, Nowak_2020}, imaging \citep{Lagrange_2020, Nielsen_2020}, radial velocity observations \citep{Lagrange_2020}, and absolute stellar astrometry \citep{Brandt_2021} to provide updated orbital parameters for both $\beta$~Pictoris~b and c using the \texttt{orbitize!} code \citep{orbitize}.
+%
+We fit a two-planet model to the data, fitting the system parallax, $\pi$, the stellar mass, $M_\star$, the planet masses, $M_b$ and $M_c$, and the orbital parameters of each planet: semi-major axis, $a$, orbital eccentricity, $e$, orbital inclination, $i$, argument of periastron, $\omega$, position of the ascending node, $\Omega$, and epoch of periastron in fractional orbital periods with respect to a reference epoch.
+%
+We used MJD 59000 as the reference epoch to allow for direct comparison against \citet{Lacour_2020}.
+%
+We imposed Gaussian priors on $M_\star$ informed by the literature measurements of $M_\star$ (see Table~\ref{tab:orbitize_param}), as well as the system parallax, using the same values as \citet{Lacour_2021}. 
 
-% To sample the posterior of estimated orbital parameters, we used the parallel-tempered affine-invariant sampler \texttt{ptemcee} \citep{Foreman-Mackey_2013, Vousden_2016} with 20 temperatures and 1000 walkers per temperature.
-% %
-% We discarded the first 4000 steps of every walker as a ``burn-in'' and only used the samples from the lowest temperature walkers for constructing our posterior.
-% %
+To sample the posterior of estimated orbital parameters, we used the parallel-tempered affine-invariant sampler \texttt{ptemcee} \citep{Foreman-Mackey_2013, Vousden_2016} with 20 temperatures and 1000 walkers per temperature.
+%
+We discarded the first 4000 steps of every walker as a ``burn-in'' and only used the samples from the lowest temperature walkers for constructing our posterior.
+%
 
-% \subsection{Geometry of the Hill sphere transit}\label{sec:Hill_sphere_transit}
-% The orbital bundles are processed in the Python \verb|Orbitize| model \citep{orbitize} using 200 orbits as shown in Fig.~\ref{fig:Orbitize_plot}.
-% %
-% The separation of \picb{} and \picc{} from the host star is shown in units of Hill radii \citep{Hamilton_1992}, for each respective planet using
-% %
-% \begin{equation}
-%     r_{\text{Hill}} \approx a \left(\frac{M_p}{M_{\star}+M_p} \right)^{\frac{1}{3}}  (1-e),
-% \end{equation}
-% where $a$ describes the semi-major axis between the star and the planet, $M$ are the masses and $e$ is the eccentricity. 
-% %
-% The parameters of the star and \picc{} are listed in Table \ref{tab:orbitize_param} and are used to obtain a Hill radius of 0.30 au. 
+\subsection{Geometry of the Hill sphere transit}\label{sec:Hill_sphere_transit}
+The orbital bundles are processed in the Python \verb|Orbitize| model \citep{orbitize} using 200 orbits as shown in Fig.~\ref{fig:Orbitize_plot}.
+%
+The separation of \picb{} and \picc{} from the host star is shown in units of Hill radii \citep{Hamilton_1992}, for each respective planet using
+%
+\begin{equation}
+    r_{\text{Hill}} \approx a \left(\frac{M_p}{M_{\star}+M_p} \right)^{\frac{1}{3}}  (1-e),
+\end{equation}
+where $a$ describes the semi-major axis between the star and the planet, $M$ are the masses and $e$ is the eccentricity. 
+%
+The parameters of the star and \picc{} are listed in Table \ref{tab:orbitize_param} and are used to obtain a Hill radius of 0.30 au. 
 
 % \begin{figure}[t]
 %     \centering
