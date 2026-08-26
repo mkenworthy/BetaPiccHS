@@ -271,4 +271,4 @@ ax[14].set_xlabel('MJD [days]')
 
     
 plt.savefig(paths.figures / '1981_fits.pdf', bbox_inches='tight', dpi=700)
-plt.show()
+plt.clpse()

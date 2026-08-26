@@ -7,6 +7,7 @@ dependencies:
   - conda-forge::cython
   - conda-forge::scipy
   - conda-forge::tqdm
+  - conda-forge::lmfit
   - pip:
       - matplotlib
       - graphviz
