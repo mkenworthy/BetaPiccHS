@@ -329,62 +329,63 @@ The parameters of the star and \picc{} are listed in Table \ref{tab:orbitize_par
     \label{fig:Orbitize_plot}
 \end{figure} 
 
-% \begin{table}[t]
-% \caption{Adopted observational values for the \pic{} System and \picc{} extracted from references listed.}
-% \centering
-% \begin{tabular}{cccc} 
-% \hline
-% Parameter\,&Value\,&Units\,&Reference\\
-% \hline
-% \hline
-% $M_*$       & 1.797 $\pm$ 0.035     & $M_\odot$ & 1\\
-% $R_*$       & 1.497 $\pm$ 0.025     & $R_\odot$ & 1\\
-% $T_*$       & 8090 $\pm$ 59         & K         & 1\\
-% $L_*$       & 8.47 $\pm$ 0.23     & $L_{\odot}$ & 1\\
-% \hline
-% $M_c$       & 8.5 $\pm$ 0.5    & $M_J$     & 4\\
-% $R_c$       & 1.2 $\pm$ 0.1     & $R_J$     & 3\\
-% $T_c$       & 1250 $\pm$ 50      & K         & 3\\
-% $P_c$       & 1221 $\pm$ 15      & days         & 2\\
-% $a$          & 2.68 $\pm$ 0.02 & au       & 2 \\
-% $e$         &   0.208 $\pm$ 0.0074   &       & 4 \\
-% \hline
-% \end{tabular}
+\begin{table}[t]
+\caption{Adopted observational values for the \pic{} System and \picc{} extracted from references listed.}
+\centering
+\begin{tabular}{cccc} 
+\hline
+Parameter\,&Value\,&Units\,&Reference\\
+\hline
+\hline
+$M_*$       & 1.797 $\pm$ 0.035     & $M_\odot$ & 1\\
+$R_*$       & 1.497 $\pm$ 0.025     & $R_\odot$ & 1\\
+$T_*$       & 8090 $\pm$ 59         & K         & 1\\
+$L_*$       & 8.47 $\pm$ 0.23     & $L_{\odot}$ & 1\\
+\hline
+$M_c$       & 8.5 $\pm$ 0.5    & $M_J$     & 4\\
+$R_c$       & 1.2 $\pm$ 0.1     & $R_J$     & 3\\
+$T_c$       & 1250 $\pm$ 50      & K         & 3\\
+$P_c$       & 1221 $\pm$ 15      & days         & 2\\
+$a$          & 2.68 $\pm$ 0.02 & au       & 2 \\
+$e$         &   0.208 $\pm$ 0.0074   &       & 4 \\
+\hline
+\end{tabular}
 
-% \tablebib{ (1) ~\citet{Zwintz_2019};
-% (2) \citet{Lacour_2021};
-% (3) \citet{Nowak_2020}; (4) \citet{Vandal_2020}.
-% }
-% \label{tab:orbitize_param}
+\tablebib{ (1) ~\citet{Zwintz_2019};
+(2) \citet{Lacour_2021};
+(3) \citet{Nowak_2020}; (4) \citet{Vandal_2020}.
+}
+\label{tab:orbitize_param}
 
-% \end{table}
+\end{table}
 
-% The midpoints of the transits occur at the time of closest approach, where the Hill sphere passes in front of the star during the primary transit and behind the star during the secondary transit. 
-% %
-% Fig.~\ref{fig:Orbitize_plot} shows one full orbit of \picc{}, with two primary transits and one secondary transit. 
-% %
-% The most likely midpoint of the transits is derived from the mode of  200 orbits, with limits set by the earliest and latest timestamps of minimum separation. 
-% %
-% The computed primary transits are MJD $\text{58195} \substack{+\text{11} \\ -\text{20}}$ and $\text{59415} \substack{+\text{8} \\ -\text{8}}$ or 2018 March 18 and 2021 July 20, respectively. 
-% %
-% The secondary transit at MJD $\text{58707}\substack{+\text{3} \\ -\text{7}}$ (2019 August 12) has the lowest orbital uncertainties, resulting in the smallest dispersion.
-% %
-% The dispersion increases at timestamps further away from the secondary transit.
+The midpoints of the transits occur at the time of closest approach, where the Hill sphere passes in front of the star during the primary transit and behind the star during the secondary transit. 
+%
+Fig.~\ref{fig:Orbitize_plot} shows one full orbit of \picc{}, with two primary transits and one secondary transit. 
+%
+The most likely midpoint of the transits is derived from the mode of  200 orbits, with limits set by the earliest and latest timestamps of minimum separation. 
+%
+The computed primary transits are MJD $\text{58195} \substack{+\text{11} \\ -\text{20}}$ and $\text{59415} \substack{+\text{8} \\ -\text{8}}$ or 2018 March 18 and 2021 July 20, respectively. 
+%
+The secondary transit at MJD $\text{58707}\substack{+\text{3} \\ -\text{7}}$ (2019 August 12) has the lowest orbital uncertainties, resulting in the smallest dispersion.
+%
+The dispersion increases at timestamps further away from the secondary transit.
 
-% \section{Observations}\label{sec:Observations}
+\section{Observations}\label{sec:Observations}
 
-% \begin{figure*}[t]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{figures/All_photometric_transits.pdf}
-%     \caption{The binned photometric data of all Hill sphere transits of bRing, BRITE and ASTEP.
-%     %
-%     The latter two only cover the primary transit at MJD 58195.
-%     %
-%     The midpoints of the transits and their uncertainty are marked with an error bar and the blue boxes mark the duration of the transit ($\sim$1.5 months).
-%     %
-%     No significant decrease in flux is seen over the three transits. }
-%     \label{fig:photometric_transits}
-% \end{figure*} 
+\begin{figure*}[t]
+    \script{05_Photometric data transits plots.py}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/All_photometric_transits.pdf}
+    \caption{The binned photometric data of all Hill sphere transits of bRing, BRITE and ASTEP.
+    %
+    The latter two only cover the primary transit at MJD 58195.
+    %
+    The midpoints of the transits and their uncertainty are marked with an error bar and the blue boxes mark the duration of the transit ($\sim$1.5 months).
+    %
+    No significant decrease in flux is seen over the three transits. }
+    \label{fig:photometric_transits}
+\end{figure*} 
 
 % The Hill sphere campaign of \picb{} \citep{Kenworthy_2021} observed the \pic{} system at high photometric cadence during the Hill sphere transit of \picb{}.
 % %
