@@ -249,6 +249,6 @@ def plot_tau(deltaf, f,t, offset_list):
     axes[9].set_ylabel("Normalized flux") 
 
     plt.draw()
-    plt.savefig(paths.figures / 'sensitivity_CPD_mock_data_vertical.pdf', bbox_inches='tight')
+    plt.savefig(paths.figures / 'sensitivity_CPD_mock_data.pdf', bbox_inches='tight')
     
 plot_tau(deltaf_all,f_all,t, offset_days)
