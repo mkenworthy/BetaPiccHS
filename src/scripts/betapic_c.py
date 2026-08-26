@@ -7,6 +7,7 @@ M_star = 1.797 * u.Msun  # Zwintz19
 R_star = 1.497 * u.Rsun # Zwintz19
 T_star = 8090. * u.K    # Zwintz19
 d_star = 19.450 * u.pc # nielsen20
+L_star = 8.47 * u.L_sun # Zwintz19
 # planet b
 # M_b = 12.8 * u.Mjupiter # Nielsen20
 # r_b = 1.46 * u.Rjupiter # Chilcote17
@@ -18,12 +19,12 @@ d_star = 19.450 * u.pc # nielsen20
 
 
 # planet c
-M_b = 8.5 * u.Mjupiter # Vandal2020
-r_b = 1.2 * u.Rjupiter # Nowak2020
-T_b = 1250 * u.K # Nowak2020
-a_b = 2.68 * u.au # Lacour2021
-i_b = 88.95 * u.deg # lacour2021
-P_b = 1221 * u.day # lacour2021
+M_c = 8.5 * u.Mjupiter # Vandal2020
+r_c = 1.2 * u.Rjupiter # Nowak2020
+T_c = 1250 * u.K # Nowak2020
+a_c = 2.68 * u.au # Lacour2021
+i_c = 88.95 * u.deg # lacour2021
+P_c = 1221 * u.day # lacour2021
 
 """Calculations for beta pic b"""
 # Lagrange (2020)
@@ -39,7 +40,7 @@ th = Table()
 """Calculations for beta pic b"""
 
 t = 45/2 #1.5 months 191.8/2
-x = 58210
+x = 58195
 th['th']   = [x-t, x-t/2, x, x+t/2, x+t]
 th['therr'] = [18.,   18.,   2.6,   18.,   18.]
 

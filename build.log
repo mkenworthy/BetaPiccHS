@@ -1,0 +1,48 @@
+Fetching Overleaf repo...
+Pulling changes from Overleaf: src/tex/ms.tex src/tex/bib.bib
+No Overleaf changes to commit to the repo.
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-08-26 12:28:16
+  Workflow ID: 482c77ee-dc68-42ef-9efc-8cc427fa6aa7
+  Platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+  Host: ValLinux
+  User: valerie_linux
+  Snakemake version: 9.25.2
+  Python version: 3.11.16 | packaged by conda-forge | (main, Aug 21 2026, 22:44:51) [GCC 14.4.0]
+  Command: /home/valerie_linux/miniforge3/envs/showyourwork/bin/snakemake --cores 1 --use-conda --conda-frontend conda --cache -s /home/valerie_linux/miniforge3/envs/showyourwork/lib/python3.11/site-packages/showyourwork/workflow/prep.smk
+  Snakefile: /home/valerie_linux/miniforge3/envs/showyourwork/lib/python3.11/site-packages/showyourwork/workflow/prep.smk
+  Base directory: /home/valerie_linux/miniforge3/envs/showyourwork/lib/python3.11/site-packages/showyourwork/workflow
+  Run directory: /home/valerie_linux/BetaPiccHS
+  Working directory: /home/valerie_linux/BetaPiccHS
+  Config file(s): ['/home/valerie_linux/BetaPiccHS/.showyourwork/showyourwork.yml']
+  Config MD5: d5009ed5cef8928f0c44790a09cfd7d2
+
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Nothing to be done (all requested files are present and up to date).
+Zenodo cache not yet published for this repository.
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-08-26 12:28:20
+  Workflow ID: 5f5e473a-46ff-45c1-a257-01cf0b367aa4
+  Platform: Linux-6.8.0-124-generic-x86_64-with-glibc2.39
+  Host: ValLinux
+  User: valerie_linux
+  Snakemake version: 9.25.2
+  Python version: 3.11.16 | packaged by conda-forge | (main, Aug 21 2026, 22:44:51) [GCC 14.4.0]
+  Command: /home/valerie_linux/miniforge3/envs/showyourwork/bin/snakemake --cores 1 --use-conda --conda-frontend conda --cache -s /home/valerie_linux/miniforge3/envs/showyourwork/lib/python3.11/site-packages/showyourwork/workflow/build.smk
+  Snakefile: /home/valerie_linux/miniforge3/envs/showyourwork/lib/python3.11/site-packages/showyourwork/workflow/build.smk
+  Base directory: /home/valerie_linux/miniforge3/envs/showyourwork/lib/python3.11/site-packages/showyourwork/workflow
+  Run directory: /home/valerie_linux/BetaPiccHS
+  Working directory: /home/valerie_linux/BetaPiccHS
+  Config file(s): ['/home/valerie_linux/BetaPiccHS/.showyourwork/config.json']
+  Config MD5: 522ef44627d987ac5251a3bc19a9949f
+
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Nothing to be done (all requested files are present and up to date).

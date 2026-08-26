@@ -1,23 +1,24 @@
 """Plot the 1981 data and the fit"""
+from astropy import constants as c
+from astropy import units as u
+import numpy.ma as ma
 import numpy as np
+from matplotlib.collections import PatchCollection
 from astropy.table import Table
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from astropy.time import Time
 from astropy.io import ascii
+import betapic_c as bp
 import os, sys
 import datetime
+from matplotlib.ticker import (MultipleLocator, FormatStrFormatter, AutoMinorLocator)
 import paths
 
-mpl.rcParams.update({'font.size': 18})
-
 runtime = os.path.abspath((sys.argv[0])) + " run at " + datetime.datetime.now().strftime("%c")
-tyb = dict(color='black', fontsize=20)
 
 # choose epochs where to fit the 1981 function
-
-# fwhm = 3.2 days is estimated from Lamers 1997 A&A 328 321 page 8 Figure 7
-fwhm_lamers = 3.2
+fwhm_lamers = 3.2 #days is estimated from Lamers 1997 A&A 328 321 page 8 Figure 7
 
 def m1981(t, t0, peak, bgnd, fwhm=fwhm_lamers, inner_width=0.25, depth=-0.009):
     """m1981 - a model for the 1981 event
@@ -55,7 +56,6 @@ def m1981(t, t0, peak, bgnd, fwhm=fwhm_lamers, inner_width=0.25, depth=-0.009):
     return(di)
 
 # Lecavelier des Etangs photometry
-
 # leclavier des etangs 1992 AA 328 311 - Table 1
 # beta pic photometry
 t_lde = Table.read( """     JD          Vmag
@@ -64,7 +64,7 @@ t_lde = Table.read( """     JD          Vmag
                             4917.804    3.824
                             4917.857    3.824
                             4918.628    3.805
-                            4918.720    3.835
+  #                          4918.720    3.835
                             4918.786    3.838
                             4918.856    3.845
                             4919.802    3.823
@@ -77,14 +77,13 @@ t_lde = Table.read( """     JD          Vmag
 
 # The complete beta pic photometry from Lecavelier 1995
 t = ascii.read(paths.data / 'lecavelierdesetangs1995/table', format='cds', 
-               readme= paths.data / 'lecavelierdesetangs1995/ReadMe')
+               readme=paths.data / 'lecavelierdesetangs1995/ReadMe')
 t_1981epoch = t['JD'] - 2440000.
 
-f = plt.figure(figsize=(8,6))
-ax1 = f.add_subplot(111)
+fig, ax1 = plt.subplots(1,1,figsize= (8.3*0.5 , 8.3/1.618*0.6), constrained_layout=True)
 
 # Lecavelier 1995 photometry
-ax1.scatter(t_1981epoch, t['Vmag'], color='grey', s=20)
+ax1.scatter(t_1981epoch, t['Vmag'], color='grey', s=10)
 
 t_mid = 4919.04 # from Lecavelier des Etangs 1997
 t_mid = t_mid - 0.14 # seems to be an offset I need by looking at the Lamers 1997 Figure 7
@@ -94,7 +93,7 @@ V_mag_background = 3.842 # V band mean magnitude from Lamers 1997 Figure 1 estim
 V_1981_peak      = 0.034 # Amplitude of the broad peak model from Lamers 1997 estimated from Figure 7
 
 ax1.errorbar(t_lde['JD'], t_lde['Vmag'], yerr=V_sigma,
-             fmt='o', color='red',ecolor='red',capsize=0 ,mew=2, elinewidth=2,ms=4)
+             fmt='o', color='red',ecolor='red',capsize=0 ,mew=1, elinewidth=1,ms=2)
 ax1.set_xlabel('MJD [days]')
 ax1.set_ylabel('V band [mag]')
 
@@ -103,7 +102,8 @@ ax1.set_ylim(3.86,3.78)
 ax1.set_xlim(t_mid-dt, t_mid+dt)
 
 t = np.arange(t_mid-dt, t_mid+dt, 0.05)
-
-ax1.plot(t, m1981(t, t_mid, -V_1981_peak, V_mag_background, fwhm=fwhm_lamers, depth=0.009)) # 3.842
+ax1.xaxis.set_minor_locator(MultipleLocator(1))  
+ax1.yaxis.set_minor_locator(MultipleLocator(0.005))   
+ax1.plot(t, m1981(t, t_mid, -V_1981_peak, V_mag_background, fwhm=fwhm_lamers, depth=0.009)) 
 plt.draw()
-plt.savefig(paths.figures / 'm1981model.pdf', bbox_inches='tight')
+plt.savefig(paths.figures / '1981_eventm1981model.pdf', bbox_inches='tight')
