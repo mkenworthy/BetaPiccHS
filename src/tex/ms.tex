@@ -387,50 +387,52 @@ The dispersion increases at timestamps further away from the secondary transit.
     \label{fig:photometric_transits}
 \end{figure*} 
 
-% The Hill sphere campaign of \picb{} \citep{Kenworthy_2021} observed the \pic{} system at high photometric cadence during the Hill sphere transit of \picb{}.
-% %
-% Close thereafter, \picc{} was discovered and the campaign coincidentally covered the transit of \picc{} as well \citep{Stuik_2017}. 
-% %
-% One of the instruments used was the \pic{} b Ring project (bRing) with almost full coverage of the system \citep{Snellen_2012,Snellen_2013,Stuik_2014, Stuik_2016,Talens_2017,Talens_2018}.
-% %
-% This instrument's coverage was further supported by Mascara and DREAM from 2017 February 03 to 2023 January 17.
-% %
-% The BRITE constellation \citep[BRIght Target Explorer; ][]{Weiss_2014} observed \pic{} from low Earth orbit, allowing higher precision than ground-based observations and negligible noise from atmospheric turbulence.  
-% %
-% The data quality of the blue filter was deemed insufficient for \pic{} \citep{Zwintz_2019} and only the red filter (550 -700 nm) is used. 
-% %
-% The data reduction pipeline is detailed in \citet{Popowic_2017} and a correction for \pic{} is given in \citet{Zwintz_2019}. 
-% %
-% The data from BRITE-Heweliusz (BHr) and BRITE-Toronto (BTr) cover 2015 March 16 to 2021 March 28 with irregular observations. 
-% %
-% The last instrument is ASTEP \citep{Crouzet_2010}, operational during the Antarctic winters and modified with a filter to observe the \pic{} system \citep{Kenworthy_2021}. 
-% %
-% ASTEP obtained data from 2017 March 30 to 2018 August 17.
+The Hill sphere campaign of \picb{} \citep{Kenworthy_2021} observed the \pic{} system at high photometric cadence during the Hill sphere transit of \picb{}.
+%
+Close thereafter, \picc{} was discovered and the campaign coincidentally covered the transit of \picc{} as well \citep{Stuik_2017}. 
+%
+One of the instruments used was the \pic{} b Ring project (bRing) with almost full coverage of the system \citep{Snellen_2012,Snellen_2013,Stuik_2014, Stuik_2016,Talens_2017,Talens_2018}.
+%
+This instrument's coverage was further supported by Mascara and DREAM from 2017 February 03 to 2023 January 17.
+%
+The BRITE constellation \citep[BRIght Target Explorer; ][]{Weiss_2014} observed \pic{} from low Earth orbit, allowing higher precision than ground-based observations and negligible noise from atmospheric turbulence.  
+%
+The data quality of the blue filter was deemed insufficient for \pic{} \citep{Zwintz_2019} and only the red filter (550 -700 nm) is used. 
+%
+The data reduction pipeline is detailed in \citet{Popowic_2017} and a correction for \pic{} is given in \citet{Zwintz_2019}. 
+%
+The data from BRITE-Heweliusz (BHr) and BRITE-Toronto (BTr) cover 2015 March 16 to 2021 March 28 with irregular observations. 
+%
+The last instrument is ASTEP \citep{Crouzet_2010}, operational during the Antarctic winters and modified with a filter to observe the \pic{} system \citep{Kenworthy_2021}. 
+%
+ASTEP obtained data from 2017 March 30 to 2018 August 17.
 
-% The midpoints of the transits and their coverage are shown in Fig.~\ref{fig:photometric_transits}. 
-% %
-% The data has been normalised and binned to 0.05 days.
-% %
-% The error bars mark the uncertainty of the midpoint of the transits and the boxes mark the duration of the transit ($\sim$1.5 months). 
-% %
-% bRing covers all three transits, BRITE covers the first primary transit at MJD 58195 and ASTEP covers the tail end of this Hill sphere transit.
-% %
-% To probe the environment within the Hill sphere, a dimming of photometric flux due to dust within the Hill sphere is needed and not scattered light, therefore, despite the small dip at MJD 58690 and the smallest uncertainty of the midpoint of the transit, the secondary transit does not give insight into the CPD.
-% %
-% The transit at MJD 58195 has the best coverage, however also the largest uncertainty in its midpoint.
-% %
-% The second primary transit at MJD 59415 has the least amount of photometric coverage and both transits show no significant flux deviations. 
-% \section{Photometric results and analysis}\label{sec:Photo_Results}
-% \subsection{The 1981 event}\label{sec:method_1981}
-% \begin{figure*}[t] 
-%     \centering
-%         \includegraphics[trim={0 27.9cm 0 0},clip,width=0.9\textwidth] {figures/1981_fits.pdf} 
-%          \caption{The amplitude $m$ of the BRITE (blue), bRing (green) and ASTEP (red) data fitted to the 1981 event are shown, where 0.035 marks the magnitude of the 1981 event.
-%          %
-%          The midpoints of the primary (MJD 58195 $\&$ 59415) and secondary (MJD 58707) Hill sphere transits and their uncertainty are marked with an error bar and the blue boxes marks the duration of the transit ($\sim$1.5 months). The figure is continued in Appendix \ref{sec:appendix_1981_event}. }
+The midpoints of the transits and their coverage are shown in Fig.~\ref{fig:photometric_transits}. 
+%
+The data has been normalised and binned to 0.05 days.
+%
+The error bars mark the uncertainty of the midpoint of the transits and the boxes mark the duration of the transit ($\sim$1.5 months). 
+%
+bRing covers all three transits, BRITE covers the first primary transit at MJD 58195 and ASTEP covers the tail end of this Hill sphere transit.
+%
+To probe the environment within the Hill sphere, a dimming of photometric flux due to dust within the Hill sphere is needed and not scattered light, therefore, despite the small dip at MJD 58690 and the smallest uncertainty of the midpoint of the transit, the secondary transit does not give insight into the CPD.
+%
+The transit at MJD 58195 has the best coverage, however also the largest uncertainty in its midpoint.
+%
+The second primary transit at MJD 59415 has the least amount of photometric coverage and both transits show no significant flux deviations. 
+\section{Photometric results and analysis}\label{sec:Photo_Results}
+\subsection{The 1981 event}\label{sec:method_1981}
+
+\begin{figure*}[t] 
+    \script{06_1981_fit.py}
+    \centering
+        \includegraphics[trim={0 27.9cm 0 0},clip,width=0.9\textwidth] {figures/1981_fits.pdf} 
+         \caption{The amplitude $m$ of the BRITE (blue), bRing (green) and ASTEP (red) data fitted to the 1981 event are shown, where 0.035 marks the magnitude of the 1981 event.
+         %
+         The midpoints of the primary (MJD 58195 $\&$ 59415) and secondary (MJD 58707) Hill sphere transits and their uncertainty are marked with an error bar and the blue boxes marks the duration of the transit ($\sim$1.5 months). The figure is continued in Appendix \ref{sec:appendix_1981_event}. }
          
-%      \label{fig:cross_correlation}
-% \end{figure*}
+     \label{fig:cross_correlation}
+\end{figure*}
 
 % The light curve of the 1981 event (Fig.~\ref{fig:1981}) is modelled as two rings, where an optically thick but narrow ring lies within a broader, optically thin one, as described in \citet{Lamers_1997}. 
 % %
