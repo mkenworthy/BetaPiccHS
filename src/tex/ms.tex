@@ -641,54 +641,55 @@ The model is very sensitive to the given midpoint of the transit and three days 
 Thus, the large uncertainties of the Hill sphere transits are the largest obstacle in fitting the model.
 
 
-\begin{figure*}[!t]
-\script{08_CPD_model_taumass_58195.py}
-\centering
-   \includegraphics[width=1\linewidth]{figures/taumass_58195.0_diskfit_0.1.pdf}
-   \label{fig:58195diskfit_3datasets_taumass_030}
-\caption{The optical depth (upper subpanel) and SNR (lower subpanel) for a CPD fit at varying tilts and inclinations for the Hill sphere transit at MJD 58195 and a circumplanetary radius of 0.3 $r_{\text{Hill}}$ (upper panel) and 0.6 $r_{\text{Hill}}$ (lower panel). 
-% 
-White mark the areas with no photometry to constrain the fit. 
-% 
-Only BRITE is shown, as ASTEP has no coverage (Fig.~\ref{fig:photometric_transits}) and bRing contains unfeasible negative optical depth values. 
-% 
-A confident CPD orientation corresponds to a single upper optical depth limit  with a high SNR as seen in the upper left plots of Fig.~\ref{fig:model_timestamps}. 
-% 
-The CPD fit at 0.3 $r_{\text{Hill}}$ has no upper optical depth and the fit at 0.6 $r_{\text{Hill}}$ shows a loosely constrained disk orientation with low SNR. }
-\label{fig:58195diskfit_3datasets_taumass}
-\end{figure*}
+% \begin{figure*}[!t]
+% \script{08_CPD_model_taumass_58195.py}
+% \centering
+%    \includegraphics[width=1\linewidth]{figures/taumass_58195.0_diskfit_0.1.pdf}
+%    \label{fig:58195diskfit_3datasets_taumass_030}
+% \caption{The optical depth (upper subpanel) and SNR (lower subpanel) for a CPD fit at varying tilts and inclinations for the Hill sphere transit at MJD 58195 and a circumplanetary radius of 0.3 $r_{\text{Hill}}$ (upper panel) and 0.6 $r_{\text{Hill}}$ (lower panel). 
+% % 
+% White mark the areas with no photometry to constrain the fit. 
+% % 
+% Only BRITE is shown, as ASTEP has no coverage (Fig.~\ref{fig:photometric_transits}) and bRing contains unfeasible negative optical depth values. 
+% % 
+% A confident CPD orientation corresponds to a single upper optical depth limit  with a high SNR as seen in the upper left plots of Fig.~\ref{fig:model_timestamps}. 
+% % 
+% The CPD fit at 0.3 $r_{\text{Hill}}$ has no upper optical depth and the fit at 0.6 $r_{\text{Hill}}$ shows a loosely constrained disk orientation with low SNR. }
+% \label{fig:58195diskfit_3datasets_taumass}
+% \end{figure*}
 \subsubsection{Analysis of the CPD}
 
-% Fig.~\ref{fig:58195diskfit_3datasets_taumass} shows the optical depths at the two most stable CPD radii, namely 0.3 and 0.6 $r_{\text{Hill}}$, for the first primary transit at MJD 58195.
-% %
-% Only the CPD fit for BRITE is shown, because ASTEP has no coverage and bRing gives negative optical depth values.
-% %
-% bRing provides no constraints to the possible CPDs, because we assume the negative optical depths are due to systematic errors in its photometry, given that we do not see this effect in BRITE.
-% %
-% Among all the instruments and different CPD radii, no single upper $\tau$ limit can be found and therefore no single disk orientation.
-% %
-% At 0.3 $r_{\text{Hill}}$ no constraints on the CPD disk can be imposed.
-% %
-% A more sensitive upper optical depth values are seen at 0.6 $r_{\text{Hill}}$, however they unfortunately correspond to low SNR values.
-% % 
-% In addition, this pattern produced by the different optical depths within the grid of disk orientations (upper subplot at 0.6 $r_{\text{Hill}}$) is inconsistent with the way we expect the model to act with a midpoint offset according to Fig. \ref{fig:model_timestamps}. 
-% % 
-% As a result, an offset of a few days is unlikely to yield a better fit.
-% %
-% There are too many uncertainties to constrain the tilt and inclination for a possible CPD at MJD 58195.
+Fig.~\ref{fig:58195diskfit_3datasets_taumass} shows the optical depths at the two most stable CPD radii, namely 0.3 and 0.6 $r_{\text{Hill}}$, for the first primary transit at MJD 58195.
+%
+Only the CPD fit for BRITE is shown, because ASTEP has no coverage and bRing gives negative optical depth values.
+%
+bRing provides no constraints to the possible CPDs, because we assume the negative optical depths are due to systematic errors in its photometry, given that we do not see this effect in BRITE.
+%
+Among all the instruments and different CPD radii, no single upper $\tau$ limit can be found and therefore no single disk orientation.
+%
+At 0.3 $r_{\text{Hill}}$ no constraints on the CPD disk can be imposed.
+%
+A more sensitive upper optical depth values are seen at 0.6 $r_{\text{Hill}}$, however they unfortunately correspond to low SNR values.
+% 
+In addition, this pattern produced by the different optical depths within the grid of disk orientations (upper subplot at 0.6 $r_{\text{Hill}}$) is inconsistent with the way we expect the model to act with a midpoint offset according to Fig. \ref{fig:model_timestamps}. 
+% 
+As a result, an offset of a few days is unlikely to yield a better fit.
+%
+There are too many uncertainties to constrain the tilt and inclination for a possible CPD at MJD 58195.
 
-% \begin{figure*}[t] 
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{figures/59415.0_diskfit_BRING.pdf}
-%   \caption{The optical depth (upper subpanel) and SNR (lower subpanel) for a CPD fit at varying tilts and inclinations for the Hill sphere transit at MJD 59415 and a circumplanetary radius of 0.3 $r_{\text{Hill}}$ (upper panel) and 0.6 $r_{\text{Hill}}$ (lower panel). 
-%     % 
-%     White mark the areas with no photometry to constrain the fit and only bRing has temporal coverage (Fig.~\ref{fig:photometric_transits}) during this Hill sphere transit. 
-% % 
-% A confident CPD orientation corresponds to a single upper optical depth limit with a high SNR as seen in the upper left plots of Fig.~\ref{fig:model_timestamps}. 
-% % 
-% The CPD fit at 0.3 $r_{\text{Hill}}$ has no upper optical depth and the fit at 0.6 $r_{\text{Hill}}$ shows a loosely constrained disk orientation.} 
-%     \label{fig:59415diskfit_3datasets_taumass}
-% \end{figure*}  
+\begin{figure*}[t] 
+\script{08_CPD_model_taumass_59415.py}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/taumass_59415.0_diskfit_0.1.pdf}
+  \caption{The optical depth (upper subpanel) and SNR (lower subpanel) for a CPD fit at varying tilts and inclinations for the Hill sphere transit at MJD 59415 and a circumplanetary radius of 0.3 $r_{\text{Hill}}$ (upper panel) and 0.6 $r_{\text{Hill}}$ (lower panel). 
+    % 
+    White mark the areas with no photometry to constrain the fit and only bRing has temporal coverage (Fig.~\ref{fig:photometric_transits}) during this Hill sphere transit. 
+% 
+A confident CPD orientation corresponds to a single upper optical depth limit with a high SNR as seen in the upper left plots of Fig.~\ref{fig:model_timestamps}. 
+% 
+The CPD fit at 0.3 $r_{\text{Hill}}$ has no upper optical depth and the fit at 0.6 $r_{\text{Hill}}$ shows a loosely constrained disk orientation.} 
+    \label{fig:59415diskfit_3datasets_taumass}
+\end{figure*}  
  
 % %
 % The second primary transit at MJD 59415 shown in Fig.~\ref{fig:59415diskfit_3datasets_taumass} has been solely covered by bRing.
