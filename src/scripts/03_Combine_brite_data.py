@@ -13,7 +13,6 @@ t1 = ascii.read(paths.data / 'brite/betaPic_2015-16-17-18-BHr.dat')
 t2 = ascii.read(paths.data / 'brite/betaPic_2019_BHr.dat')
 t3 = ascii.read(paths.data / 'brite/betaPic_2021-BHr-all.dat')
 t_b = vstack([t1,t2,t3])
-
 # convert to MJD
 time = t_b['col1'] + 2456000.0 - 2400000.5
 

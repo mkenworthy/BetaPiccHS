@@ -1,25 +1,52 @@
-rule my_script1:
+rule combine_astep:
     input:
-        "src/scripts/02_Astep_write_out_data.py"
+        "src/data/astep/betapic_astep_2017.csv",
+        "src/data/astep/betapic_astep_2018.csv"
     output:
-        "src/data/astep/astep_all.fits"
-    shell:
-        "python {input}"
+        "src/data/astep_all.fits"
+    conda:
+        "environment.yml"
+    script:
+        "src/scripts/02_Astep_write_out_data.py"
 
-rule my_script2:
+rule combine_brite:
     input:
-        "src/scripts/03_Combine_brite_data.py"  
+        "src/data/brite/betaPic_2015-16-17-18-BHr.dat",
+        "src/data/brite/betaPic_2019_BHr.dat",
+        "src/data/brite/betaPic_2021-BHr-all.dat" 
     output:
         "src/data/brite/brite_all_R.fits"
-    shell:
-        "python {input}"
+    conda:
+        "environment.yml"        
+    script:
+        "src/scripts/03_Combine_brite_data.py"
         
-rule my_script3:
+rule bin_BRITE:
     input:
-        "src/scripts/04_Bin_data.py"  
+        "src/data/brite/brite_all_R.fits"  
     output:
         "src/data/binned_BRITE.dat"
+    conda:
+        "environment.yml"
+    script:
+        "src/scripts/04_Bin_data_BRITE.py"
+
+rule bin_BRING:
+    input:
+        "src/data/bring/Reduced_betaPic.fits"  
+    output:
         "src/data/binned_BRING.dat"
+    conda:
+        "environment.yml"
+    script:
+        "src/scripts/04_Bin_data_BRING.py"
+
+rule bin_ASTEP:
+    input:
+        "src/data/astep_all.fits"  
+    output:
         "src/data/binned_ASTEP.dat"
-    shell:
-        "python {input}"
+    conda:
+        "environment.yml"
+    script:
+        "src/scripts/04_Bin_data_ASTEP.py"

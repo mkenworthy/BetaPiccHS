@@ -8,7 +8,7 @@ import paths
 fname_astep17 = paths.data / 'astep/betapic_astep_2017.csv'
 fname_astep18 = paths.data / 'astep/betapic_astep_2018.csv'
 
-fname_out = paths.data / 'astep/astep_all.fits'
+fname_out = paths.data / 'astep_all.fits'
 
 data_astep17 = ascii.read(fname_astep17)
 data_astep18 = ascii.read(fname_astep18)

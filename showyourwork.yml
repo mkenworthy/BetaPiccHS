@@ -31,11 +31,31 @@ datasets:
 
 # Custom file dependencies
 dependencies:
-  # src/scripts/my_script.py:
-  #   - src/data/dataset_for_my_script.dat
-  # src/tex/ms.tex:
-  #   - src/tex/stylesheet.tex
-
+  src/scripts/09_CPD_model_mass_59415.py:
+    - src/data/binned_BRING.dat
+    - src/data/binned_ASTEP.dat
+    - src/data/binned_BRITE.dat
+  src/scripts/09_CPD_model_mass_58195.py:
+    - src/data/binned_BRING.dat
+    - src/data/binned_ASTEP.dat
+    - src/data/binned_BRITE.dat
+  src/scripts/08_CPD_model_taumass_59415.py:
+    - src/data/binned_BRING.dat
+    - src/data/binned_ASTEP.dat
+    - src/data/binned_BRITE.dat
+  src/scripts/08_CPD_model_taumass_58195.py:
+    - src/data/binned_BRING.dat
+    - src/data/binned_ASTEP.dat
+    - src/data/binned_BRITE.dat
+  src/scripts/06_1981_fit.py:
+    - src/data/binned_BRING.dat
+    - src/data/binned_ASTEP.dat
+    - src/data/binned_BRITE.dat
+  src/scripts/05_Photometric_data_transits_plots.py:
+    - src/data/binned_BRING.dat
+    - src/data/binned_ASTEP.dat
+    - src/data/binned_BRITE.dat
+  
 # Name of the `.tex` manuscript and corresponding `.pdf` article
 ms_name: ms
 
