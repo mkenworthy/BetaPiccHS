@@ -62,7 +62,9 @@ dependencies:
     - src/data/binned_BRING.dat
     - src/data/binned_ASTEP.dat
     - src/data/binned_BRITE.dat
-  
+  src/scripts/plot_m1982model.py:
+    - src/data/lecavelierdesetangs1995/ReadMe
+    - src/data/lecavelierdesetangs1995/table
 # Name of the `.tex` manuscript and corresponding `.pdf` article
 ms_name: ms
 
