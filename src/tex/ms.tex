@@ -428,7 +428,7 @@ The second primary transit at MJD 59415 has the least amount of photometric cove
         \includegraphics[trim={0 27.9cm 0 0},clip,width=0.9\textwidth] {figures/1981_fits.pdf} 
          \caption{The amplitude $m$ of the BRITE (blue), bRing (green) and ASTEP (red) data fitted to the 1981 event are shown, where 0.035 marks the magnitude of the 1981 event.
          %
-         The midpoints of the primary (MJD 58195 $\&$ 59415) and secondary (MJD 58707) Hill sphere transits and their uncertainty are marked with an error bar and the blue boxes marks the duration of the transit ($\sim$1.5 months). The figure is continued in Appendix \ref{sec:appendix_1981_event}. }
+         The midpoints of the primary (MJD 58195 $\&$ 59415) and secondary (MJD 58707) Hill sphere transits and their uncertainty are marked with an error bar and the blue boxes marks the duration of the transit ($\sim$1.5 months). The figure is continued in Fig.~\ref{fig:cross_correlation2}. }
          
      \label{fig:cross_correlation}
 \end{figure*}
@@ -448,7 +448,7 @@ The function returns the best fit $m, b$ and $\sigma_m$, where a compelling dete
 %
 Larger amplitudes than 0.05 are discarded and $F(t)$ masks out any data points more than 8 days away from $t_{mid}$, fitting only for the duration of the 1981 event.
 %
-All observational data from ASTEP, bRing and BRITE were fitted to the model, shown in Fig.~\ref{fig:cross_correlation} and Fig.~\ref{sec:appendix_1981_event}.
+All observational data from ASTEP, bRing and BRITE were fitted to the model, shown in Fig.~\ref{fig:cross_correlation} and Fig.~\ref{fig:cross_correlation2}.
 %
 bRing has the best coverage, while ASTEP's coverage is limited to the first 500 days, and BRITE's coverage is very sporadic.  
 %
@@ -460,7 +460,7 @@ A good fit to the model would yield a smooth, symmetric increase and decline in 
 %
 The latter is unfortunately difficult to achieve due to a lack of coverage from ASTEP and BRITE. 
 
-No such ideal fit is seen, however multiple timestamps exceed the 0.035 threshold.
+No such ideal fit is seen, however multiple epochs exceed the 0.035 threshold.
 %
 The primary transit at MJD 58195 does not show a compelling detection, while the second primary transit at MJD 59415 does if taking the error of the midpoint into account. 
 %
@@ -480,7 +480,7 @@ The remaining detections ($m$>0.02) are short-lived for about a day or two, like
 %
 There is no strong evidence that the 1981 event was caused by the Hill sphere transit of \picc{}.  
 
-Fig.~\ref{fig:cross_correlation} and Fig.~\ref{sec:appendix_1981_event} show additional features outside the transits. 
+Fig.~\ref{fig:cross_correlation} (continued in Fig.~\ref{fig:cross_correlation2}) shows additional features outside the transits. 
 %
 A symmetric curve at MJD 58250 around the threshold of 0.035 is seen with ASTEP, however bRing and BRITE do not show this feature. 
 %
@@ -668,7 +668,7 @@ Among all the instruments and different CPD radii, no single upper $\tau$ limit 
 %
 At 0.3 $r_{\text{Hill}}$ no constraints on the CPD disk can be imposed.
 %
-A more sensitive upper optical depth values are seen at 0.6 $r_{\text{Hill}}$, however they unfortunately correspond to low SNR values.
+More sensitive upper optical depth values are seen at 0.6 $r_{\text{Hill}}$, however they unfortunately correspond to low SNR values.
 % 
 In addition, this pattern produced by the different optical depths within the grid of disk orientations (upper subplot at 0.6 $r_{\text{Hill}}$) is inconsistent with the way we expect the model to act with a midpoint offset according to Fig. \ref{fig:model_timestamps}. 
 % 
@@ -737,7 +737,7 @@ $M_{\text{CPD}}$ [g]&   $10^{20.9}$  & $10^{21.7}$ \\
 \end{table*} 
 
 %
-Fig.~\ref{fig:taumass_58195} and \ref{fig:taumass_59415} in the Appendix show the upper mass limit for MJD 58195 and 59415, respectively, using equation \ref{eq:mass_limit}.
+Fig.~\ref{fig:taumass_58195} and \ref{fig:taumass_59415} in the Appendix show the upper mass limit for MJD 58195 and 59415, respectively, using Eqn. \ref{eq:mass_limit}.
 %
 Table \ref{tab:uppermass} shows the mean dust size and upper mass limit constrained by the upper limits of $\tau$.
 %
@@ -746,9 +746,9 @@ The grain size was computed to be 18.1 and 25.6 $\mu$m, for 0.3 and 0.6  $r_{\te
 The upper mass limits at MJD 58195 were determined to be $10^{19.1} $g and $10^{19.6}$g  for 0.3 and 0.6 
 $r_{\text{Hill}}$ respectively and at MJD 59415 $10^{20.9}$g and $10^{21.7}$g for 0.3 and 0.6 $r_{\text{Hill}}$ respectively.
 %
-We cautiously place an upper mass limit of the order $10^{21}$g in the Hill sphere of \picc{}. 
+We place an upper mass limit of the order $10^{21}$g in the Hill sphere of \picc{}. 
 
-Possible ways of improving future studies of \pic{} include (i) constraining the midpoint by improved orbital fits of \picc{}, and (ii) running a more general fitting code with the midpoint $t_b$ as a free parameter \citep[e.g. \texttt{emcee}; ][]{Foreman_Mackey_2013}.
+Possible ways of improving future studies of \pic{} include (i) constraining the midpoint by improved orbital fits of \picc{}, and (ii) running a more general fitting code with the midpoint $t_b$ as a free parameter \citep[e.g. \texttt{emcee}; ][]{Foreman-Mackey_2013}.
 %
 The grain size $D_{\text{min}}$ used to calculate the upper limit of the CPD mass assumes a homogeneous distribution and constant grain size in the disk.  
 %
@@ -810,10 +810,10 @@ Part of this research was carried out in part at the Jet Propulsion Laboratory, 
 \label{sec:appendix_1981_event}
 The continuation of Fig.~\ref{fig:cross_correlation} is shown in Fig. ~\ref{fig:cross_correlation2}.
 \begin{figure}[ht]
-\script{06_1981_fit.py}s
+\script{06_1981_fit.py}
     \centering
         \includegraphics[trim={0cm 0cm 0 11cm},clip,width=0.9\textwidth] {figures/1981_fits.pdf}
-    \caption{Fig. ~\ref{fig:cross_correlation} continued}
+    \caption{Fig.~\ref{fig:cross_correlation} continued}
   \label{fig:cross_correlation2}
 \end{figure}
 
@@ -821,7 +821,7 @@ The continuation of Fig.~\ref{fig:cross_correlation} is shown in Fig. ~\ref{fig:
 
 \section{Upper mass limits}
 
-The upper mass limits shown in Fig.~\ref{fig:taumass_58195} and \ref{fig:taumass_59415} are computed using equation \ref{eq:mass_limit} and the optical depths of Fig.~\ref{fig:58195diskfit_3datasets_taumass} and Fig.~\ref{fig:59415diskfit_3datasets_taumass}.
+The upper mass limits shown in Fig.~\ref{fig:taumass_58195} and \ref{fig:taumass_59415} are computed using Eqn. \ref{eq:mass_limit} and the optical depths of Fig.~\ref{fig:58195diskfit_3datasets_taumass} and Fig.~\ref{fig:59415diskfit_3datasets_taumass}.
 %
 Fig.~\ref{fig:taumass_58195} shows the upper limit of $\tau$ corrected for inclination and the upper mass limit at 0.3 $r_{\text{Hill}}$ and 0.6 $r_{\text{Hill}}$ for MJD 58195 using only BRITE data. 
 %
