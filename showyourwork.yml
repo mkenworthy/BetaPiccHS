@@ -18,16 +18,23 @@ dag:
     shape: "box"
     penwidth: "2"
     width: "1"
-  # Files and glob patterns to ignore
-  # ignore_files:
-  #  - src/tex/orcid-ID.png
-
 
 # Externally-hosted datasets, e.g. on Zenodo
 datasets:
-  # 10.5281/zenodo.6468327:
-  #   contents:
-  #     TOI640b.json: src/data/TOI640b.json
+  10.5281/zenodo.22205930:
+    contents:
+      gravity_vandalrv_hgcav2.hdf5: src/data/gravity_vandalrv_hgcav2.hdf5
+      betapic_astep_2017.csv: src/data/astep/betapic_astep_2017.csv
+      betapic_astep_2018.csv: src/data/astep/betapic_astep_2018.csv
+      README_ASTEP.md: src/data/astep/README.md
+      Reduced_betaPic.fits: src/data/bring/Reduced_betaPic.fits
+      betaPic_2015-16-17-18-BHr.dat: src/data/brite/betaPic_2015-16-17-18-BHr.dat
+      betaPic_2019_BHr.dat: src/data/brite/betaPic_2019_BHr.dat
+      betaPic_2021-BHr-all.dat: src/data/brite/betaPic_2021-BHr-all.dat
+      brite_all_R.fits: src/data/brite/brite_all_R.fits
+      plot_lecavelierdesetangs1995.py: src/data/lecavelierdesetangs1995/plot_lecavelierdesetangs1995.py
+      ReadMe: src/data/lecavelierdesetangs1995/ReadMe
+      table: src/data/lecavelierdesetangs1995/table
 
 # Custom file dependencies
 dependencies:
@@ -65,7 +72,8 @@ optimize_caching: false
 # Overleaf sync settings
 overleaf:
   # Overleaf project ID (blank = disabled)
-  id: 6961716b1f368871d240c349
+  id:
+#    id: 6961716b1f368871d240c349
   # Perform sync on GitHub Actions?
   gh_actions_sync: true
   # List of files to push to Overleaf
