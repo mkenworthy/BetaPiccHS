@@ -65,6 +65,8 @@ dependencies:
   src/scripts/plot_m1981model.py:
     - src/data/lecavelierdesetangs1995/ReadMe
     - src/data/lecavelierdesetangs1995/table
+  src/scripts/01_orbitalbundles_Beta_Pic_c.py:
+    - src/data/gravity_vandalrv_hgcav2.hdf5
 # Name of the `.tex` manuscript and corresponding `.pdf` article
 ms_name: ms
 

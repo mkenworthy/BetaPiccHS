@@ -148,7 +148,7 @@ A photometric fluctuation of about 4\% was seen towards \pic{} in 1981, indicati
 {Observations from the BRITE satellite, and the bRing and ASTEP observatories are fitted to a model of the 1981 event to search for a similar event, and also search for a signal consistent with a circumplanetary disk transit using a simple flat disk model.}
 {No compelling evidence for a 1981 event during a Hill sphere primary transit is found, although we do find a candidate event around 2019 July 26.
 %
-Due to the uncertainty in the time of closest projected separation of \picc{}, a search for a disk during the primary transit of 2018 could not be robustly determined, but bRing photometry for the second primary transit places an upper limit on the dust content of the Hill sphere of $\sim 10^{21}$ grams of material.}
+Due to the uncertainty in the time of closest projected separation of \picc{}, a search for a disk during the primary transit of 2018 could not be robustly determined, but bRing photometry for the second primary transit places an upper limit on the dust content of the Hill sphere of $\sim 10^{22}$ grams of material.}
 {With no compelling detection of an event similar to that seen in 1981 during the transits of \picc{} in the photometric time series, we rule out the hypothesis that this event was related to the Hill spheres of \picc{} and \picb{}.
 %
 Future observations of the next Hill sphere transit in 2028 can be realised with both ground-based observatories and with PLATO, whose first long duration science pointing will include \pic{}.
@@ -175,7 +175,7 @@ One of the first major discoveries is the inner warped disk at 5$^\circ$ from th
 %
 The primordial dust from the interstellar molecular cloud has likely been dispersed, leaving a system composed of disintegrating bodies in an early-phase planetary system \citep[e.g.][]{Backman_1993,Artymowicz_1997,Lagrange_2000,Zuckerman_2001}.
 %
-Moreover, star-grazing comets have provided evidence of their collisions and evaporation, giving rise to a mix of gas and dust in the disk  \citep[e.g.][and references therein]{Lagrange_1998,Beust_1990,Lecavelier_Des_Etangs_1995,Beust_1996,Vidal_Madjar_2017}. 
+Moreover, star-grazing comets have provided evidence of their collisions and evaporation, giving rise to a mix of gas and dust in the disk \citep[e.g.][and references therein]{Lagrange_1998,Beust_1990,Lecavelier_Des_Etangs_1995,Beust_1996,Vidal_Madjar_2017}. 
 
 The structure and composition of the disk led to the belief that the system hosts exoplanets, and in 2009 the first exoplanet in the system was detected by means of high-contrast imaging  \citep{Lagrange_2009}. 
 %
@@ -206,11 +206,11 @@ Most recently, a third gas giant planet, \picd{} has been simultaneously detecte
 
 On the 10th of November 1981 Universal Time (UT) the Geneva Observatory measured a significant increase in photometric flux of the \pic{} system \citep{ Lecavelier_Des_Etangs_1995}.
 %
-This mysterious ``1981'' event, shown in Fig.~\ref{fig:1981}, lasted 10 days with a dip halfway and detection in multiple colour bands with a confidence level of 99$\%$.
+This mysterious `1981' event, shown in Fig.~\ref{fig:1981}, lasted 10 days with a dip halfway and detection in multiple colour bands with a confidence level of 99$\%$.
 %
 The origin of the event was strongly debated; one explanation could be caused by a giant comet \citep{Lamers_1997}, generating a cloud with highly forward-peaked scattering moving in front of the star \citep{Lecavelier_Des_Etangs_1995, Lecavelier_Des_Etangs_1997}.
 %
-Another explanation is a transiting planet with the following constraints, assuming a planet in circular motion \citep{Lecavelier_Des_Etangs_1997}; (i) The period is less than 19 years; (ii) the radius of the transiting object must be 2.3 to 4.0 times the radius of Jupiter.  
+Another explanation is a transiting planet with the following constraints, assuming a planet in circular motion \citep{Lecavelier_Des_Etangs_1997}: (i) the period is less than 19 years; (ii) the radius of the transiting object must be 2.3 to 4.0 times the radius of Jupiter.
 %
 The notion that the 1981 event was caused by a planet has become less favoured with the discovery of the planets in non-transiting orbits, where observations have shown that the large occultation depth is more likely to be produced by dust in a CPD \citep{Lecavelier_des_Etangs_2008a, Lecavelier_des_Etangs_2008b}. 
 %
@@ -286,7 +286,7 @@ $\mathrm{\beta~Pictoris~c}$ & & & \\
 \hline
 \end{tabular}
 \tablefoot{
-The observed astrometric offsets in right ascension ($\Delta$RA) and declination  ($\Delta$Dec) are given in milli-arcseconds (mas). The correlation coefficient between right ascension and declination is given by $\rho$.}
+The observed astrometric offsets in right ascension ($\Delta$RA) and declination ($\Delta$Dec) are given in milli-arcseconds (mas). The correlation coefficient between right ascension and declination is given by $\rho$.}
 \end{table}
 
 \subsection{Orbit fit}
@@ -301,11 +301,11 @@ We imposed Gaussian priors on $M_\star$ informed by the literature measurements 
 
 To sample the posterior of estimated orbital parameters, we used the parallel-tempered affine-invariant sampler \texttt{ptemcee} \citep{Foreman-Mackey_2013, Vousden_2016} with 20 temperatures and 1000 walkers per temperature.
 %
-We discarded the first 4000 steps of every walker as a ``burn-in'' and only used the samples from the lowest temperature walkers for constructing our posterior.
+We discarded the first 4000 steps of every walker as a `burn-in' and only used the samples from the lowest temperature walkers for constructing our posterior.
 %
 
 \subsection{Geometry of the Hill sphere transit}\label{sec:Hill_sphere_transit}
-The orbital bundles are processed in the Python \verb|Orbitize| model \citep{orbitize} using 200 orbits as shown in Fig.~\ref{fig:Orbitize_plot}.
+The orbital bundles are processed in the Python \verb|Orbitize| model \texttt{orbitize!} using 200 orbits as shown in Fig.~\ref{fig:Orbitize_plot}.
 %
 The separation of \picb{} and \picc{} from the host star is shown in units of Hill radii \citep{Hamilton_1992}, for each respective planet using
 %
@@ -322,7 +322,7 @@ The parameters of the star and \picc{} are listed in Table \ref{tab:orbitize_par
     \includegraphics[width=0.48\textwidth]{figures/orbitize_b_c.pdf}
     \caption{The separation of \picb{} and \picc{} from the star in terms of their Hill sphere.
     %
-    \picb{} has a longer orbital period ($\sim$20 yr), with a Hill sphere primary transit at MJD $\sim$58000 and a Hill sphere radius of 1.1 au. \picc{} has a shorter orbital period ($\sim$3.3 yr), with two primary transits at MJD $58195^{+11}_{-20}$  and $59415^{+8}_{-8}$ and a secondary transit at $58707^{+3}_{-7}$.
+    \picb{} has a longer orbital period ($\sim$20 yr), with a Hill sphere primary transit at MJD $\sim$58000 and a Hill sphere radius of 1.1 au. \picc{} has a shorter orbital period ($\sim$3.3 yr), with two primary transits at MJD $58195^{+11}_{-20}$ and $59415^{+8}_{-8}$ and a secondary transit at $58707^{+3}_{-7}$.
     %
     The Hill sphere radius is approximately 0.3 au. }
     \label{fig:Orbitize_plot}
@@ -362,7 +362,7 @@ The midpoints of the transits occur at the time of closest approach, where the H
 %
 Fig.~\ref{fig:Orbitize_plot} shows one full orbit of \picc{}, with two primary transits and one secondary transit. 
 %
-The most likely midpoint of the transits is derived from the mode of  200 orbits, with limits set by the earliest and latest timestamps of minimum separation. 
+The most likely midpoint of the transits is derived from the mode of 200 orbits, with limits set by the earliest and latest timestamps of minimum separation. 
 %
 The computed primary transits are MJD $\text{58195} \substack{+\text{11} \\ -\text{20}}$ and $\text{59415} \substack{+\text{8} \\ -\text{8}}$ or 2018 March 18 and 2021 July 20, respectively. 
 %
@@ -396,7 +396,7 @@ This instrument's coverage was further supported by Mascara and DREAM from 2017 
 %
 The BRITE constellation \citep[BRIght Target Explorer; ][]{Weiss_2014} observed \pic{} from low Earth orbit, allowing higher precision than ground-based observations and negligible noise from atmospheric turbulence.  
 %
-The data quality of the blue filter was deemed insufficient for \pic{} \citep{Zwintz_2019} and only the red filter (550 -700 nm) is used. 
+The data quality of the blue filter was deemed insufficient for \pic{} \citep{Zwintz_2019} and only the red filter (550 -700 nm) was used. 
 %
 The data reduction pipeline is detailed in \citet{Popowic_2017} and a correction for \pic{} is given in \citet{Zwintz_2019}. 
 %
@@ -414,7 +414,7 @@ The error bars mark the uncertainty of the midpoint of the transits and the boxe
 %
 bRing covers all three transits, BRITE covers the first primary transit at MJD 58195 and ASTEP covers the tail end of this Hill sphere transit.
 %
-To probe the environment within the Hill sphere, a dimming of photometric flux due to dust within the Hill sphere is needed and not scattered light, therefore, despite the small dip at MJD 58690 and the smallest uncertainty of the midpoint of the transit, the secondary transit does not give insight into the CPD.
+To probe the environment within the Hill sphere, a dimming of photometric flux due to dust within the Hill sphere is required and not scattered light, therefore, despite the small dip at MJD 58690 and the smallest uncertainty of the midpoint of the transit, the secondary transit does not give insight into the CPD.
 %
 The transit at MJD 58195 has the best coverage, however also the largest uncertainty in its midpoint.
 %
@@ -452,7 +452,7 @@ All observational data from ASTEP, bRing and BRITE were fitted to the model, sho
 %
 bRing has the best coverage, while ASTEP's coverage is limited to the first 500 days, and BRITE's coverage is very sporadic.  
 %
-The transits of $\sim$1.5 months are marked in the blue box, while the uncertainties in the midpoints of the eclipse are marked by error bars.
+The transits of $\sim$1.5 months are marked with a blue box, while the uncertainties in the midpoints of the eclipse are marked by error bars.
 %
 The magnitude of the 1981 event is indicated by a horizontal line with $m$=0.035. 
 %
@@ -508,7 +508,7 @@ We see a candidate for the 1981-like event at MJD 58690 (2019 July 26) with an u
 Other transiting bodies could have created the 1981 event, however we are not aware of any other bodies large enough to do so in the system.  
 %
 Exocomets are too short-lived and not bright enough.  
-
+%
 Another hypothesis is forward scattering by a dust cloud, with dust clouds several times the diameter of the star, resulting in brightness variations at longer timescales.  
 %
 At the right tilt and inclination, a dust cloud transit could have shorter timescales, and possibly overlap with the epoch of the 1981 event.  
@@ -591,7 +591,7 @@ It assumes an optically thin slab to determine the optical depth,
 \end{equation} 
 Where $I_0$ is the attenuated star flux and $I$ is the observed star flux. 
 %
-The optical depth $\tau$, $r_{\text{CPD}},i,\phi,\text{t}_b$ and $t$ are used to compute the light curve  $I(t)=f(r_{\text{CPD}},\tau,i,\phi,\text{t}_b$,t) by injecting a transit for $r \leq r_{\text{CPD}}$. 
+The optical depth $\tau$, $r_{\text{CPD}},i,\phi,\text{t}_b$ and $t$ are used to compute the light curve $I(t)=f(r_{\text{CPD}},\tau,i,\phi,\text{t}_b$,t) by injecting a transit for $r \leq r_{\text{CPD}}$. 
 %
 A grid of trial inclinations $i$ and tilts $\phi$ are explored, as the obliquity of \picc{} is unknown and the obliquity of planets are unconstrained to their orbital plane \citep{Laskar_1993, Kenworthy_2021}.  
 %
@@ -616,10 +616,10 @@ The data for the primary transits (MJD 58195 \& MJD 59415) from each instrument 
 Once the upper $\tau$ limit is found, the total mass of the dust can be computed using, 
 %
 \begin{equation}
-    M_{\text{CPD}} = \frac{4 \tau \rho  D_{\text{min}} }{3} \pi r_{\text{CPD}}^2,
+    M_{\text{CPD}} = \frac{4 \tau \rho D_{\text{min}} }{3} \pi r_{\text{CPD}}^2,
     \label{eq:mass_limit}
 \end{equation} 
-Where the fraction represents the surface density $\sigma_{\text{CPD}} = \tau / \kappa$ with an opacity of $\kappa = 3/(4 \rho D_{\text{min}})$.  
+Where the fraction represents the surface density $\sigma_{\text{CPD}} = \tau / \kappa$ with an opacity of $\kappa = 3/(4 \rho D_{\text{min}})$. 
 
 \subsubsection{Sensitivity of the CPD model}
 
@@ -627,7 +627,7 @@ The midpoints of the Hill sphere transits have uncertainties up to 20 days at MJ
 %
 We modelled a disk with a radius of 0.6 $r_{\text{Hill}}$, an inclination of 20$^\circ$, a tilt of 50$^\circ$, an impact parameter of 0.2, an optical depth $\tau$ of 0.1 and a midpoint at MJD 58195.
 %
-The top left of Fig.~\ref{fig:model_timestamps} shows the results of minimising the optical depth using $\chi^2$ and shows two partial high optical depth paths intersecting at the best fit disk orientation, confirming the model can detect the tilt and inclination of the disk.   
+The top left of Fig.~\ref{fig:model_timestamps} shows the results of minimising the optical depth using $\chi^2$ and shows two partial high optical depth paths intersecting at the best fit disk orientation, confirming the model can detect the tilt and inclination of the disk. 
 %
 We now add an offset to the midpoint of the transit without adjusting the given midpoint to the model (MJD 58195) and repeat the fit for offsets of [3,5,10,15,20] days.
 %
@@ -635,7 +635,7 @@ Fig.~\ref{fig:model_timestamps} shows the optical depths in the upper panel of e
 %
 In blue the transit times with offset is highlighted and in purple the transit times at zero offset. 
 %
-The model is very sensitive to the given midpoint of the transit and three days is enough for the disk to be detected but with the incorrect parameters.  
+The model is very sensitive to the given midpoint of the transit and three days is enough for the disk to be detected but with the incorrect parameters. 
 %
 Thus, the large uncertainties of the Hill sphere transits are the largest obstacle in fitting the model.
 
@@ -651,7 +651,7 @@ White mark the areas with no photometry to constrain the fit.
 % 
 Only BRITE is shown, as ASTEP has no coverage (Fig.~\ref{fig:photometric_transits}) and bRing contains unfeasible negative optical depth values. 
 % 
-A confident CPD orientation corresponds to a single upper optical depth limit  with a high SNR as seen in the upper left plots of Fig.~\ref{fig:model_timestamps}. 
+A confident CPD orientation corresponds to a single upper optical depth limit with a high SNR as seen in the upper left plots of Fig.~\ref{fig:model_timestamps}. 
 % 
 The CPD fit at 0.3 $r_{\text{Hill}}$ has no upper optical depth and the fit at 0.6 $r_{\text{Hill}}$ shows a loosely constrained disk orientation with low SNR. }
 \label{fig:58195diskfit_3datasets_taumass}
@@ -688,7 +688,7 @@ A confident CPD orientation corresponds to a single upper optical depth limit wi
 % 
 The CPD fit at 0.3 $r_{\text{Hill}}$ has no upper optical depth and the fit at 0.6 $r_{\text{Hill}}$ shows a loosely constrained disk orientation.} 
     \label{fig:59415diskfit_3datasets_taumass}
-\end{figure*}  
+\end{figure*} 
  
 %
 The second primary transit at MJD 59415 shown in Fig.~\ref{fig:59415diskfit_3datasets_taumass} has been solely covered by bRing.
@@ -741,18 +741,18 @@ Fig.~\ref{fig:taumass_58195} and \ref{fig:taumass_59415} in the Appendix show th
 %
 Table \ref{tab:uppermass} shows the mean dust size and upper mass limit constrained by the upper limits of $\tau$.
 %
-The grain size was computed to be 18.1 and 25.6 $\mu$m, for 0.3 and 0.6  $r_{\text{Hill}}$ respectively for both transits. 
+The grain size was computed to be 18.1 and 25.6 $\mu$m, for 0.3 and 0.6 $r_{\text{Hill}}$ respectively for both transits. 
 %
-The upper mass limits at MJD 58195 were determined to be $10^{19.1} $g and $10^{19.6}$g  for 0.3 and 0.6 
-$r_{\text{Hill}}$ respectively and at MJD 59415 $10^{20.9}$g and $10^{21.7}$g for 0.3 and 0.6 $r_{\text{Hill}}$ respectively.
+The upper mass limits at MJD 58195 were determined to be $10^{19.1} $ g and $10^{19.6}$ g for 0.3 and 0.6 
+$r_{\text{Hill}}$ respectively and at MJD 59415 $10^{20.9}$ g and $10^{21.7}$ g for 0.3 and 0.6 $r_{\text{Hill}}$ respectively.
 %
-We place an upper mass limit of the order $10^{21}$g in the Hill sphere of \picc{}. 
+We place an upper mass limit of the order $10^{22}$ g in the Hill sphere of \picc{}.
 
 Possible ways of improving future studies of \pic{} include (i) constraining the midpoint by improved orbital fits of \picc{}, and (ii) running a more general fitting code with the midpoint $t_b$ as a free parameter \citep[e.g. \texttt{emcee}; ][]{Foreman-Mackey_2013}.
 %
-The grain size $D_{\text{min}}$ used to calculate the upper limit of the CPD mass assumes a homogeneous distribution and constant grain size in the disk.  
+The grain size $D_{\text{min}}$ used to calculate the upper limit of the CPD mass assumes a homogeneous distribution and constant grain size in the disk. 
 %
-It is possible that there is no disk and the material has accreted onto the planet or exomoons, giving that the system is at the end of the planet formation process, or the disk could have a low obliquity and does not transit the star.  
+It is possible that there is no disk and the material has accreted onto the planet or exomoons, giving that the system is at the end of the planet formation process, or the disk could have a low obliquity and does not transit the star. 
 
 \section{Conclusions}\label{sect:conc}
 Following the Hill sphere transit of \picb{}, we have carried out an analysis on the data used in \citet{Kenworthy_2021} to search for any material transiting the star in the Hill sphere transits of \picc{}.
