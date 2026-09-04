@@ -6,9 +6,13 @@
 <img src="https://img.shields.io/badge/view-pdf-blue.svg?style=flat" alt="Read with PDF.js"/></a>
 <a href="https://github.com/showyourwork/showyourwork"><img src="https://img.shields.io/badge/created%20with-showyourwork!-ff0000" alt="created with showyourwork!"></a>
 
-# The Hill sphere transits of Beta Pic c and a search for the 1981 event
+# The Hill sphere transits of Beta Pic c and the search for another 1981-like event
 
-*Valerie E.C. Bakker, Matthew A. Kenworthy, Konstanze Zwintz, et al.*
+*V.E.C. Bakker, M.A. Kenworthy, R. Stuik, K. Zwintz, T. Guillot, S. Vach, J. Wang, J. Kammerer, W. Balmer, S. Lacour, S. Zieba, E.E. Mamajek, G.-D. Marleau, R.B. Kuhn, P. Kalas, Y. De Pra, E.J.W. de Mooij, N. Crouzet, M. Buttu, J.I. Bailey III*
+
+<img width="787" height="411" alt="1981" src="https://github.com/user-attachments/assets/76fccabf-81d5-4d21-bab7-2d46e607ac62" />
+
+Accepted for publication in Astronomy and Astrophysics in July 2026.
 
 An open source scientific article created using the [showyourwork](https://github.com/showyourwork/showyourwork) workflow.
 
@@ -19,5 +23,7 @@ The article and associated data can be compiled and built locally with:
     cd BetaPiccHS
     showyourwork build
 
-...and the article will be built in about 30 minutes.
+...and the article will be built in about 20 minutes.
+
+
 
